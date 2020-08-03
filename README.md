@@ -1,6 +1,6 @@
 # LRUQache
 
-The LRU(least recently used) caching scheme is to remove the least recently used item when the cache reaches it's defined capacity. This gem implements this cache using a simple customised implementation of queue. So the gem is LRU Qache i.e. LRU Q(c)ache i.e. LRU Queue Cache.
+The LRU(least recently used) caching scheme is to remove the least recently used item when the cache reaches it's defined capacity. This gem implements this cache using a simple customised implementation of queue. So the gem is LRU Qache i.e. LRU Queue Cache.
 
 ## Installation
 

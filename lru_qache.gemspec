@@ -8,8 +8,9 @@ Gem::Specification.new do |spec|
   spec.description = 'A simple LRU(Least Recently Used) Cache implementation using a custom queue.'
   spec.authors     = ['Datt Dongare']
   spec.email       = 'duttdongare30@gmail.com'
-  spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/datt/lru_cache'
+  spec.homepage = 'https://rubygems.org/gems/lru-qache'
+  spec.metadata['homepage_uri'] = 'https://rubygems.org/gems/lru-qache'
+  spec.metadata['source_code_uri'] = 'https://github.com/datt/lru_qache'
   spec.require_paths = ['lib']
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
@@ -18,5 +19,6 @@ Gem::Specification.new do |spec|
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
-  spec.add_development_dependency ['rspec', 'yard']
+  spec.add_development_dependency 'rspec', '~> 3.9'
+  spec.add_development_dependency 'yard', '~> 0.9.25'
 end
