@@ -1,9 +1,9 @@
 require './lib/lru_qache'
 
-describe LRUQache, 'get' do
+describe LruQache, 'get' do
   context 'if value is present' do
     it 'returns the value which was set for a key' do
-      lru_cache = LRUQache.new(2)
+      lru_cache = LruQache.new(2)
       lru_cache.set('a', 11)
       lru_cache.set('b', 12)
       expect(lru_cache.get('a')).to eq(11)
@@ -12,7 +12,7 @@ describe LRUQache, 'get' do
 
   context 'if value is not present' do
     it 'returns -1' do
-      lru_cache = LRUQache.new(2)
+      lru_cache = LruQache.new(2)
       lru_cache.set('a', 11)
       expect(lru_cache.get('x')).to eq(-1)
     end
@@ -20,7 +20,7 @@ describe LRUQache, 'get' do
 
   context 'if value is present, access with alias i.e. []' do
     it 'returns the value which was set for a key' do
-      lru_cache = LRUQache.new(2)
+      lru_cache = LruQache.new(2)
       lru_cache.set('a', 11)
       expect(lru_cache['x']).to eq(-1)
     end
@@ -28,16 +28,16 @@ describe LRUQache, 'get' do
 
   context 'if no value is present' do
     it 'returns unique elements with less size' do
-      lru_cache = LRUQache.new(2)
+      lru_cache = LruQache.new(2)
       expect(lru_cache.get('x')).to eq(-1)
     end
   end
 end
 
-describe LRUQache, 'set' do
+describe LruQache, 'set' do
   context 'If key is not present and cache capacity is available' do
     it 'removes last item' do
-      lru_cache = LRUQache.new(2)
+      lru_cache = LruQache.new(2)
       val = lru_cache.set('a', 11)
       expect(val).to eq(11)
     end
@@ -45,7 +45,7 @@ describe LRUQache, 'set' do
 
   context 'If key is present' do
     it 'removes last item' do
-      lru_cache = LRUQache.new(2)
+      lru_cache = LruQache.new(2)
       val = lru_cache['a'] = 11
       expect(val).to eq(11)
     end
@@ -53,7 +53,7 @@ describe LRUQache, 'set' do
 
   context 'Cache capacity is full and access old key' do
     it 'removes least used key' do
-      lru_cache = LRUQache.new(2)
+      lru_cache = LruQache.new(2)
       lru_cache.set('a', 11)
       lru_cache.set('b', 12)
       lru_cache.set('c', 13)
@@ -63,7 +63,7 @@ describe LRUQache, 'set' do
 
   context 'If key is already present' do
     it 'replaces the value' do
-      lru_cache = LRUQache.new(2)
+      lru_cache = LruQache.new(2)
       lru_cache.set('a', 11)
       val = lru_cache.set('a', 12)
       expect(val).to eq(12)
