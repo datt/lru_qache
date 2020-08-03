@@ -26,7 +26,7 @@ class LruQache # LRU cache is caching technique based on recently used data.
   # @example get(x)
   def get(key)
     value = retrieve(key)
-    update_lru(key, value) unless value == options[:default_val]
+    update_lru(key) unless value == options[:default_val]
     value
   end
 
@@ -68,7 +68,7 @@ class LruQache # LRU cache is caching technique based on recently used data.
   # to the last
   #
   # @param Takes key the input, it can be any valid Object needed for hash
-  def update_lru(key, value = nil)
+  def update_lru(key)
     val = cache.delete(key)
     cache[key] = val
   end

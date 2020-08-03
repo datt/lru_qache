@@ -1,6 +1,6 @@
 # LRUQache
 
-The LRU(least recently used) caching scheme is to remove the least recently used item when the cache reaches it's defined capacity. This gem implements this cache using a core Hash which is orderd hash.
+The LRU(least recently used) caching scheme is to remove the least recently used item when the cache reaches it's defined capacity. This gem implements this cache using a core Hash which is [ordered hash](https://www.igvita.com/2009/02/04/ruby-19-internals-ordered-hash/). But this will work only if Ruby version is greater than 1.9.
 
 ## Installation
 
