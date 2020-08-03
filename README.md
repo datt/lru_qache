@@ -1,13 +1,13 @@
-# LRUQueueCache
+# LRUQache
 
-The LRU(least recently used) caching scheme is to remove the least recently used item when the cache reaches it's defined capacity. This gem implements this cache using a simple customised implementation of queue.
+The LRU(least recently used) caching scheme is to remove the least recently used item when the cache reaches it's defined capacity. This gem implements this cache using a simple customised implementation of queue. So the gem is LRU Qache i.e. LRU Q(c)ache i.e. LRU Queue Cache.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'lru_queue_cache'
+gem 'lru_qache'
 ```
 
 And then execute:
@@ -16,14 +16,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install lru_queue_cache
+    $ gem install lru_qache
 
 ## Usage
 ```ruby
-require "lru_cache"
+require "lru_qache"
 
 # create a new cache with a 100 items capacity.
-cache = LRUQueueCache.new(100)
+cache = LRUQache.new(100)
 
 # set an item in cache
 cache.set('key', 'your_value')
@@ -46,7 +46,7 @@ To run the test cases
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/datt/lru_queue_cache.
+Bug reports and pull requests are welcome on GitHub at https://github.com/datt/lru_qache.
 
 
 ## License

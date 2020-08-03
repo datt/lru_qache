@@ -1,4 +1,4 @@
-require './lib/lru_queue_cache/lru_queue'
+require './lib/lru_qache/lru_queue'
 
 describe LRUQueue, 'push' do
   context 'if size is 1, keep only latest 1 item' do

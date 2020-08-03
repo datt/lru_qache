@@ -1,8 +1,8 @@
-require_relative 'lib/lru_queue_cache/version'
+require_relative 'lib/lru_qache/version'
 
 Gem::Specification.new do |spec|
-  spec.name        = "lru_queue_cache"
-  spec.version     = LruQueueCache::VERSION
+  spec.name        = "lru_qache"
+  spec.version     = LRUQache::VERSION
   spec.date        = '2020-08-03'
   spec.summary     = 'LRU Cache using a queue.'
   spec.description = 'A simple LRU(Least Recently Used) Cache implementation using a custom queue.'

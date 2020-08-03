@@ -1,6 +1,6 @@
-require "lru_queue_cache/lru_queue"
+require "lru_qache/lru_queue"
 
-class LRUQueueCache # LRU cache is caching technique based on recently used data.
+class LRUQache # LRU cache is caching technique based on recently used data.
   MAX_CAPACITY = 5
   DEFAULT_VAL = -1
 
