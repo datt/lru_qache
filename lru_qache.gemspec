@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version     = LRUQache::VERSION
   spec.date        = '2020-08-03'
   spec.summary     = 'LRU Cache using a queue.'
-  spec.description = 'A simple LRU(Least Recently Used) Cache implementation using a custom queue.'
+  spec.description = 'A simple LRU(Least Recently Used) Cache implementation using Ruby Hash'
   spec.authors     = ['Datt Dongare']
   spec.email       = 'duttdongare30@gmail.com'
   spec.homepage = 'https://rubygems.org/gems/lru-qache'
@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.metadata['source_code_uri'] = 'https://github.com/datt/lru_qache'
   spec.require_paths = ['lib']
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 1.9')
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do

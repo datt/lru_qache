@@ -37,7 +37,7 @@ class LruQache # LRU cache is caching technique based on recently used data.
   # @example set('a', 1)
   # @todo Add validation to the key e.g. only Symbol, String or Integer etc.
   def set(key, val)
-    @cache.delete(key)
+    @cache.delete(key) if cache.has_key?(key)
     @cache[key] = val
     remove_lru_if_needed
     val
